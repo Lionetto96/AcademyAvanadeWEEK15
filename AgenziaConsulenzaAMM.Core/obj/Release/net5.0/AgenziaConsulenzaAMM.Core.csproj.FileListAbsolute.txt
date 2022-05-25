@@ -1,0 +1,12 @@
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\bin\Release\net5.0\AgenziaConsulenzaAMM.Core.deps.json
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\bin\Release\net5.0\AgenziaConsulenzaAMM.Core.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\bin\Release\net5.0\AgenziaConsulenzaAMM.Core.pdb
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\obj\Release\net5.0\AgenziaConsulenzaAMM.Core.csproj.AssemblyReference.cache
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\obj\Release\net5.0\AgenziaConsulenzaAMM.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\obj\Release\net5.0\AgenziaConsulenzaAMM.Core.AssemblyInfoInputs.cache
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\obj\Release\net5.0\AgenziaConsulenzaAMM.Core.AssemblyInfo.cs
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\obj\Release\net5.0\AgenziaConsulenzaAMM.Core.csproj.CoreCompileInputs.cache
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\obj\Release\net5.0\AgenziaConsulenzaAMM.Core.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\obj\Release\net5.0\refint\AgenziaConsulenzaAMM.Core.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\obj\Release\net5.0\AgenziaConsulenzaAMM.Core.pdb
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.Core\obj\Release\net5.0\ref\AgenziaConsulenzaAMM.Core.dll

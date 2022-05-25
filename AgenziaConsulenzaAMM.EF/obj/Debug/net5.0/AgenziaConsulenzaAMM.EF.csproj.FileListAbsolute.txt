@@ -1,0 +1,15 @@
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\bin\Debug\net5.0\AgenziaConsulenzaAMM.EF.deps.json
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\bin\Debug\net5.0\AgenziaConsulenzaAMM.EF.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\bin\Debug\net5.0\AgenziaConsulenzaAMM.EF.pdb
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\bin\Debug\net5.0\AgenziaConsulenzaAMM.Core.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\bin\Debug\net5.0\AgenziaConsulenzaAMM.Core.pdb
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\AgenziaConsulenzaAMM.EF.csproj.AssemblyReference.cache
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\AgenziaConsulenzaAMM.EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\AgenziaConsulenzaAMM.EF.AssemblyInfoInputs.cache
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\AgenziaConsulenzaAMM.EF.AssemblyInfo.cs
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\AgenziaConsulenzaAMM.EF.csproj.CoreCompileInputs.cache
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\AgenziaConsulenzaAMM.EF.csproj.CopyComplete
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\AgenziaConsulenzaAMM.EF.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\refint\AgenziaConsulenzaAMM.EF.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\AgenziaConsulenzaAMM.EF.pdb
+C:\Users\alessia.lionetto\source\repos\Week15\Academy-AMM-Week7\EsercitazioneFinale_Week7_AgenziaConsulenzaAMM\AgenziaConsulenzaAMM.EF\obj\Debug\net5.0\ref\AgenziaConsulenzaAMM.EF.dll
