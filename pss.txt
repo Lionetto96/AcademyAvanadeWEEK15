@@ -1,0 +1,116 @@
+AcademyAMM2022!
+mariadestefano
+
+
+
+
+
+Subscription
+Azure subscription 1
+Resource group
+(new) acedemyammRG
+Virtual machine name
+mariadestefano
+Region
+West Europe (free services eligible)
+Availability options
+No infrastructure redundancy required
+Security type
+Standard
+Image
+Windows 10 Pro, version 20H2 - Gen2
+Size
+Standard D2as v5 (2 vcpus, 8 GiB memory)
+Username
+mariadestefano
+Public inbound ports
+RDP, HTTP
+Already have a Windows license?
+Yes
+License type
+Windows Client
+Azure Spot
+No
+Disks
+OS disk type
+Standard HDD LRS
+Use managed disks
+Yes
+Delete OS disk with VM
+Enabled
+Ephemeral OS disk
+No
+Networking
+Virtual network
+(new) acedemyammRG-vnet
+Subnet
+(new) default (10.1.0.0/24)
+Public IP
+(new) mariadestefano-ip
+Accelerated networking
+On
+Place this virtual machine behind an existing load balancing solution?
+No
+Delete public IP and NIC when VM is deleted
+Enabled
+Management
+Azure Security Center
+Basic (free)
+Boot diagnostics
+On
+Enable OS guest diagnostics
+Off
+System assigned managed identity
+Off
+Login with Azure AD
+Off
+Auto-shutdown
+On
+Site Recovery
+Disabled
+Enable hotpatch
+Off
+Patch orchestration options
+OS-orchestrated patching: patches will be installed by OS
+Advanced
+Extensions
+None
+VM applications (Preview)
+None
+Cloud init
+No
+User data
+No
+Proximity placement group
+None
+Capacity reservation group
+None
+Tags
+environment
+staging (Auto-shutdown schedule)
+environment
+staging (Availability set)
+environment
+staging (Disk)
+environment
+staging (Network interface)
+environment
+staging (Network security group)
+environment
+staging (Public IP address)
+environment
+staging (Recovery Services vault)
+environment
+staging (SSH key)
+environment
+staging (Storage account)
+environment
+staging (Virtual machine)
+environment
+staging (Virtual machine extension)
+environment
+staging (Virtual network)
+
+
+
+Server=tcp:avanadeamm-sql-srv.database.windows.net,1433;Initial Catalog=GestioneProgetto;Persist Security Info=False;User ID=mariadestefano;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
