@@ -1,0 +1,38 @@
+trigger:
+- develop
+
+variables:
+  buildConfiguration: 'Release'
+  targetPool: AvanadeAcademy
+
+pool: $(targetPool)
+
+steps:
+- script: dotnet restore
+  displayName: Restore packages from NuGet.org
+  enabled: true
+
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: Build of every project on solution
+  enabled: true
+
+- script: dotnet test --configuration $(buildConfiguration)
+  displayName: Lancia tutti i test che trovi nella soluzione
+
+- script: dotnet publish Avanade.Amazon.Api/Avanade.Amazon.Api.csproj --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
+  displayName: Publish of binaries for Avanade.Amazon
+
+- task: ArchiveFiles@2
+  displayName: Compress as Zip file
+  inputs:
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.BinariesDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish to Artifact
+  inputs:
+    PathtoPublish: '$(Build.BinariesDirectory)/$(Build.BuildId).zip'
+  condition: succeededOrFailed()  

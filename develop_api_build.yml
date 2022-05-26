@@ -1,0 +1,17 @@
+trigger:
+- develop
+
+variables:
+  buildConfiguration: 'Release'
+  targetPool: AvanadeAcademy
+
+pool: $(targetPool)
+
+steps:
+- script: dotnet restore
+  displayName: Ripristino dei pacchetti NuGet
+  enabled: true
+
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: Build della soluzione completa
+  enabled: true

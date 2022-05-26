@@ -1,0 +1,155 @@
+trigger:
+- develop
+
+variables:
+  
+  # Generali
+  buildConfiguration: Release
+  targetPool: AvanadeAcademy
+  deployEnvironment: DevelopmentEnv
+
+  # Projects
+  apiProject: Avanade.Amazon.Api
+  testProject: Avanade.Amazon.Api.Tests
+
+  # IIS
+  iisWebsiteName: 'Default Web Site'
+  iisVirtualApplicationName: 'avanade-amazon-api'
+  iisAppPoolNameForApplication: 'avanade-amazon-api'
+  iisPhysicalPathForApplication: 'C:\WEBAPPS\avanade-amazon-api'
+
+stages:
+
+##########################################################################
+# Stage di compilazione
+##########################################################################
+- stage: Build
+  displayName: Build stage
+
+  # Elenco dei jobs della stage (di solito se ne mette solo 1)
+  jobs:
+
+  # Un solo job per la compilazione e creazione dell'artefatto
+  - job: Build
+    displayName: Build
+    condition: ne(variables['Build.Reason'], 'PullRequest')
+    pool: $(targetPool)
+
+    # Elenco degli step della stage
+    steps:
+
+    # Restore dei pacchetti NuGet
+    - script: dotnet restore
+      displayName: Restore NuGet packages
+
+    # Build della soluzione
+    - script: dotnet build --configuration $(buildConfiguration)
+      displayName: Build all solution projects
+
+    # Esecuzione dei test
+    - script: |
+        cd $(testProject)
+        dotnet test --configuration $(buildConfiguration)
+      displayName: Run tests on Api
+      enabled: true
+
+    # Pubblicazione dell'artefatto
+    - script: |
+        cd $(apiProject)
+        dotnet publish --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
+      displayName: Publish application
+    
+    # Echo della directory di pubblicazione
+    - script: 'echo Directory con drop: $(Build.ArtifactStagingDirectory)'
+      displayName: Diagnostic message
+
+    # Compressione del contenuto pubblicato
+    - task: ArchiveFiles@2
+      displayName: Compress as Zip file
+      inputs:
+        rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
+        includeRootFolder: false
+        archiveType: 'zip'
+        archiveFile: '$(Build.BinariesDirectory)/$(Build.BuildId).zip'
+        replaceExistingArchive: true
+
+    # Archiviazione del file zip nella pipeline (con nome "drop")
+    - task: PublishBuildArtifacts@1
+      displayName: Publish artifact
+      inputs:
+        PathtoPublish: '$(Build.BinariesDirectory)/$(Build.BuildId).zip'
+        ArtifactName: drop
+        publishLocation: Container
+      condition: succeededOrFailed()
+          
+    # Cancellazione del file zip dalla macchina
+    - script: del $(Build.BinariesDirectory)\$(Build.BuildId).zip
+      displayName: Delete zip file to avoid waste of space on build server
+      condition: succeededOrFailed()
+      enabled: false
+
+##########################################################################
+# Stage di deploy
+##########################################################################
+- stage: Deploy
+  displayName: Deploy
+
+  # Dipende dallo stage denominato "Build"
+  dependsOn: Build
+
+  # Viene eseguito solo se build è "succeeded" e siamo sul branch di "develop"
+  condition: and(succeeded('Build'), eq(variables['build.sourceBranch'], 'refs/heads/develop'))
+
+  # Elenco dei jobs della stage (di solito se ne mette solo 1)
+  jobs:
+
+  # Unico job di deploy sul server remoto
+  - deployment: Deploy
+    displayName: Deploy
+    
+    # Ambiente di rilascio (Environments)
+    environment: $(deployEnvironment)
+    
+    # Pool di esecuzione (AgentPool)
+    pool: $(targetPool)
+
+    # Strategia
+    strategy:
+      runOnce:
+        deploy:
+
+          # Elenco degli step del deploy
+          steps:
+          
+          # Scarica il file zip denominato "drop" dalla pipeline dello stage "Build"
+          - download: current
+            displayName: Download of artifact (zip) from current pipeline
+            artifact: drop
+          
+          # Configurazione di IIS con le impostazioni della web application
+          - task: IISWebAppManagementOnMachineGroup@0
+            displayName: 'IIS Web App Manage'
+            inputs:
+              IISDeploymentType: IISWebApplication
+              WebsiteName: $(iisWebsiteName)
+              AddBinding: True
+              Bindings: '{"bindings":[{"protocol":"http","ipAddress":"All Unassigned","port":"80","hostname":"","sslThumbprint":"","sniFlag":false}]}'
+              ParentWebsiteNameForVD: $(iisWebsiteName)
+              VirtualPathForVD: '/$(iisVirtualApplicationName)'
+              ParentWebsiteNameForApplication: $(iisWebsiteName)
+              VirtualPathForApplication: '/$(iisVirtualApplicationName)'
+              PhysicalPathForApplication: $(iisPhysicalPathForApplication)
+              CreateOrUpdateAppPoolForApplication: true
+              AppPoolNameForApplication: $(iisAppPoolNameForApplication)
+
+          # Configurazione di IIS con le impostazioni della web application
+          - task: IISWebAppDeploymentOnMachineGroup@0
+            displayName: 'IIS Web App Deploy'
+            inputs:
+              WebSiteName: $(iisWebsiteName)
+              VirtualApplication: '/$(iisVirtualApplicationName)'
+              Package: '$(Pipeline.Workspace)\drop\$(Build.BuildId).zip'
+              RemoveAdditionalFilesFlag: true
+              ExcludeFilesFromAppDataFlag: true
+              TakeAppOfflineFlag: True
+              XmlVariableSubstitution: True

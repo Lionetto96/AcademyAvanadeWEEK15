@@ -1,0 +1,28 @@
+trigger:
+- develop
+
+variables:
+  buildConfiguration: 'Release'
+  targetPool: AvanadeAcademy
+
+pool: $(targetPool)
+
+steps:
+
+- script: dotnet restore
+  displayName: 'Restore NuGet packages'
+
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'Build using $(buildConfiguration) configuration'
+
+- script: |
+    cd Avanade.Cloud.Core.Tests
+    dotnet test --configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput="$(Agent.TempDirectory)/TestResults/"
+  displayName: 'Launch tests with Code Coverage'
+  continueOnError: true
+
+- task: PublishCodeCoverageResults@1
+  displayName: Publish Code Coverage to Azure DevOps
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(Agent.TempDirectory)/TestResults/coverage.cobertura.xml'
