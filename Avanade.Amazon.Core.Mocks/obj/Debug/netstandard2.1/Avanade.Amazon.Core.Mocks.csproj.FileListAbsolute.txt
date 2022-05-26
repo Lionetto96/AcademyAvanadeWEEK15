@@ -1,0 +1,13 @@
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\bin\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.deps.json
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\bin\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\bin\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.pdb
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\bin\Debug\netstandard2.1\Avanade.Amazon.Core.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\bin\Debug\netstandard2.1\Avanade.Amazon.Core.pdb
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\obj\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.csproj.AssemblyReference.cache
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\obj\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\obj\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.AssemblyInfoInputs.cache
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\obj\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.AssemblyInfo.cs
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\obj\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.csproj.CoreCompileInputs.cache
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\obj\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.csproj.CopyComplete
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\obj\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.dll
+C:\Users\alessia.lionetto\source\repos\Week15\Avanade.Amazon\Avanade.Amazon.Core.Mocks\obj\Debug\netstandard2.1\Avanade.Amazon.Core.Mocks.pdb

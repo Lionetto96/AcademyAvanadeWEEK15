@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VKJQeqofyrH0cCXcNBLC2MambUac0rBS6q6tdCSGbH96lGrmDjR67LGWl+8gya2t4l9PgTWtd4T/G/ae0hY/oQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alessia.lionetto\\source\\repos\\Week15\\Avanade.Amazon\\Avanade.Amazon.Core.Mocks\\Avanade.Amazon.Core.Mocks.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alessia.lionetto\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
